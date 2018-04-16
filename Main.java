@@ -17,6 +17,7 @@ public class Main {
 
     }
 
+
     private static void randNumOfCars() {
         Random randomGenerator = new Random();
         for (int i = 1; i <= 10; ++i) {
