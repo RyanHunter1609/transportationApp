@@ -7,16 +7,24 @@ public class Main {
         /* ## Milestone 1 - HOV using a linked list ##
         High Occupancy Vehicle (HOV) lanes, are transport lanes restricted to cars having two or more occupants.
         Create a user-defined linked list for an HOV lane. Note: randomly generate an integer [N] and fill the HOV lane with [N] cars. */
-        Car c1 = new Car(1, "red", 3); // id is 1, color is red, 3 passengers
-        Car c2 = new Car(2, "blue", 1);
-        Car c3 = new Car(3, "red", 2);
+        Car c1 = new Car(1, "red", 10001); // occupant is 1, color is red, 3 id
+        Car c2 = new Car(8, "blue", 10002);
+        Car c3 = new Car(4, "red", 10003);
 
-        System.out.println(" hello " + c1 + c2 + c3);
+        HOVLane lane = new HOVLane(c1, null);
+        // output the lane
+        System.out.println("HOV Lane: " + lane);
 
-        // todo Count how many cars are in the HOV lane
-        // todo What are the id(s) of cars with only one occupant
-        // todo How many [C] cars are in the HOV lane? [C] is a user-provided car color.
+        // output the size/length of the lane
 
+        System.out.println("lane size: " + lane.size());
+        //   lane = lane.prepend( c2 );  // write an HOVLane.prepend() method
+// output the lane
+// output the size/length of the lane
+
+        //    lane = lane.prepend( c3 );
+// output the lane
+// output the size/length of the lane
 
     }
 

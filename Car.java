@@ -1,7 +1,7 @@
 public class Car {
-    Integer occupant;
-    String color;
-    Integer id;
+    private Integer occupant;
+    private String color;
+    private Integer id;
 
 
     public Car(Integer occupant, String color, Integer id) {
@@ -12,7 +12,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return "occupant: " + occupant + "color: " + color + "id: " + id;
+        return "\tOccupant(s): " + occupant + "\tColor: " + color + "\tId: " + id;
     }
 
     public Integer getOccupant() {

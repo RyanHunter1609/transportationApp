@@ -1,3 +1,4 @@
+import java.util.LinkedList;
 
 public class HOVLane {
     private Car head;
@@ -44,6 +45,19 @@ public class HOVLane {
 
     @Override
     public String toString() {
-        return "head: " + head + "next: " + next;
+        return "\n\t" + head + "\t" + next;
     }
+
+    // todo Count how many cars are in the HOV lane
+    public int size() {
+        if (this.next == null) {
+            return 1;
+        } else {
+            return 1 + this.next.next.size();
+        }
+    }
+    // todo What are the id(s) of cars with only one occupant
+    // todo How many [C] cars are in the HOV lane? [C] is a user-provided car color.
+
 }
+
