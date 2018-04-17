@@ -12,6 +12,7 @@ public class Main {
         Car c3 = new Car(3, "red", 2);
 
         System.out.println(" hello " + c1 + c2 + c3);
+
         // todo Count how many cars are in the HOV lane
         // todo What are the id(s) of cars with only one occupant
         // todo How many [C] cars are in the HOV lane? [C] is a user-provided car color.
