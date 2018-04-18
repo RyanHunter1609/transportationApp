@@ -4,9 +4,8 @@ public class HOVLane {
     private Car head;
     private HOVLane next;
 
-    public HOVLane(Car head, HOVLane next) {
+    public HOVLane(Car head) {
         this.head = head;
-        this.next = next;
     }
 
     public Car getHead() {
@@ -48,15 +47,13 @@ public class HOVLane {
         return "\n\t" + head + "\t" + next;
     }
 
-    //create an append method
-    public HOVLane prepend(Car car) {
-        if (car == null) {
-            HOVLane temp = next;
-            next = new HOVLane(car, next);
-            return temp;
-        } else {
-            return this.getNext().prepend(car);
+    //create a prepend method
+    public HOVLane prepend() {
+        HOVLane lane = new HOVLane(this.head);
+        if (this.prepend() == null) {
+            lane.next = this;
         }
+        return lane;
     }
 
     // Count how many cars are in the HOV lane

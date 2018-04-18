@@ -11,19 +11,19 @@ public class Main {
         Car c2 = new Car(8, "blue", 10002);
         Car c3 = new Car(4, "red", 10003);
 
-        HOVLane lane = new HOVLane(c1, null);
+        HOVLane lane = new HOVLane(c1);
         // output the lane
         System.out.println("HOV Lane: " + lane);
 
         // output the size/length of the lane
 
         System.out.println("lane size: " + lane.size());
-        lane = lane.prepend(c2);  // write an HOVLane.prepend() method
+        lane = lane.prepend(); // write an HOVLane.prepend() method
 // output the lane
         System.out.println("Lane2: " + lane);
 // output the size/length of the lane
 
-        lane = lane.prepend(c3);
+        lane = lane.prepend();
 // output the lane
 // output the size/length of the lane
 
