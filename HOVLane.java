@@ -53,10 +53,9 @@ public class HOVLane {
         if (car == null) {
             HOVLane temp = next;
             next = new HOVLane(car, next);
-            next.next = temp;
             return temp;
         } else {
-            return this.next.next.prepend(car);
+            return this.getNext().prepend(car);
         }
     }
 
