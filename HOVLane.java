@@ -48,7 +48,19 @@ public class HOVLane {
         return "\n\t" + head + "\t" + next;
     }
 
-    // todo Count how many cars are in the HOV lane
+    //create an append method
+    public HOVLane prepend(Car car) {
+        if (car == null) {
+            HOVLane temp = next;
+            next = new HOVLane(car, next);
+            next.next = temp;
+            return temp;
+        } else {
+            return this.next.next.prepend(car);
+        }
+    }
+
+    // Count how many cars are in the HOV lane
     public int size() {
         if (this.next == null) {
             return 1;

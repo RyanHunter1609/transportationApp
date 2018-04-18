@@ -18,11 +18,12 @@ public class Main {
         // output the size/length of the lane
 
         System.out.println("lane size: " + lane.size());
-        //   lane = lane.prepend( c2 );  // write an HOVLane.prepend() method
+        lane = lane.prepend(c2);  // write an HOVLane.prepend() method
 // output the lane
+        System.out.println("Lane2: " + lane);
 // output the size/length of the lane
 
-        //    lane = lane.prepend( c3 );
+        lane = lane.prepend(c3);
 // output the lane
 // output the size/length of the lane
 
