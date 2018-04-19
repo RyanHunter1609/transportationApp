@@ -13,19 +13,21 @@ public class Main {
 
         HOVLane lane = new HOVLane(c1);
         // output the lane
-        System.out.println("HOV Lane: " + lane);
-
+        System.out.println("HOV Lane 1: " + lane);
         // output the size/length of the lane
+        System.out.println("HOV Lane 1 size: " + lane.size());
 
-        System.out.println("lane size: " + lane.size());
-        lane = lane.prepend(); // write an HOVLane.prepend() method
-// output the lane
-        System.out.println("Lane2: " + lane);
-// output the size/length of the lane
+        HOVLane lane2 = lane.prepend(c2); // write an HOVLane.prepend() method
+        // output the lane
+        System.out.println("\nHOV Lane 2: " + lane2);
+        // output the size/length of the lane
+        System.out.println("HOV Lane 2 size: " + lane2.size());
 
-        lane = lane.prepend();
-// output the lane
-// output the size/length of the lane
+        HOVLane lane3 = lane2.prepend(c3);// output the lane
+        System.out.println("\nHOV Lane 3: " + lane3);
+        // output the size/length of the lane
+        System.out.println("HOV Lane 3 size: " + lane3.size());
+
 
     }
 

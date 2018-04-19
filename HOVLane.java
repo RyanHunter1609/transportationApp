@@ -48,12 +48,10 @@ public class HOVLane {
     }
 
     //create a prepend method
-    public HOVLane prepend() {
-        HOVLane lane = new HOVLane(this.head);
-        if (this.prepend() == null) {
-            lane.next = this;
-        }
-        return lane;
+    public HOVLane prepend(Car car) {
+        HOVLane head = new HOVLane(car);
+        head.next = this;
+        return head;
     }
 
     // Count how many cars are in the HOV lane
@@ -61,7 +59,7 @@ public class HOVLane {
         if (this.next == null) {
             return 1;
         } else {
-            return 1 + this.next.next.size();
+            return 1 + this.next.size();
         }
     }
     // todo What are the id(s) of cars with only one occupant
