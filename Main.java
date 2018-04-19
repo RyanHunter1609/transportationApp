@@ -28,6 +28,9 @@ public class Main {
         // output the size/length of the lane
         System.out.println("HOV Lane 3 size: " + lane3.size());
 
+        //output id with one occupant
+        System.out.println("One Occupant I.D: " + lane3.idWithOnePerson());
+
 
     }
 
