@@ -65,13 +65,27 @@ public class HOVLane {
 
     // What are the id(s) of cars with only one occupant
     public Integer idWithOnePerson() {
+        if (this.head == null) {
+            return 0;
+        }
         if (this.head.getOccupant() == 1) {
             return this.head.getId();
         } else {
             return this.next.idWithOnePerson();
         }
     }
-    // todo How many [C] cars are in the HOV lane? [C] is a user-provided car color.
 
+    // todo How many [Color] cars are in the HOV lane? [Color] is a user-provided car color.
+    public int colorNum(String userColor) {
+        if (this.next == null) {
+            return 0;
+        }
+        if (this.head.getColor().equals(userColor)) {
+            return this.next.colorNum(userColor);
+        } else {
+            return 1 + this.next.colorNum(userColor);
+        }
+
+    }
 }
 
