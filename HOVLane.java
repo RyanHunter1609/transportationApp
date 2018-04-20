@@ -65,14 +65,15 @@ public class HOVLane {
 
     // What are the id(s) of cars with only one occupant
     public Integer idWithOnePerson() {
-        if (this.head == null) {
-            return 0;
+        for (int i = 0; i < this.size(); i++) {
+            if (this.head == null) {
+                return 0;
+            }
+            if (this.head.getOccupant() == 1) {
+                return this.head.getId();
+            }
         }
-        if (this.head.getOccupant() == 1) {
-            return this.head.getId();
-        } else {
-            return this.next.idWithOnePerson();
-        }
+        return this.next.idWithOnePerson();
     }
 
     // todo How many [Color] cars are in the HOV lane? [Color] is a user-provided car color.
